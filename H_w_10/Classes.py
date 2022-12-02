@@ -25,7 +25,7 @@ class Music_group:
     def __init__(self, name_group):
         self.name_group = name_group
 
-class Covers(Origin_song, Genra):
+class Covers(Origin_song, Genra, Music_group):
     def __init__(self, song, year, singer, genra, name_group):
         Origin_song.__init__(self, song, year, singer)
         Genra.__init__(self, genra)
@@ -38,7 +38,7 @@ print(cover_1)
 
 
 
-class Concerts(Covers, Genra):
+class Concerts(Covers, Genra, Music_group):
     def __init__(self, name_group, genra, date, city):
         Music_group.__init__(self, name_group)
         Genra.__init__(self, genra)
